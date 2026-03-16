@@ -1,5 +1,5 @@
 ### Nome do Aplicativo
-##**KitchenetApp**
+## **KitchenetApp**
 
 ### Integrantes do grupo
 
