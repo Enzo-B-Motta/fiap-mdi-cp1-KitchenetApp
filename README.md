@@ -69,34 +69,45 @@ Antes de executar o projeto, é necessário ter instalado em sua máquina:
 
 ### Passo a Passo
 
-1. **Clonar o repositório**
+1. **Baixe o projeto**
 
-```bash
-git clone https://github.com/SEU-USUARIO/KitchenetApp.git
-```
+- Acesse o repositório do projeto no GitHub
+- Clique no botão **Code**
+- Depois clique em **Download ZIP**
+- Extraia a pasta do projeto em seu computador
 
-2. **Entrar na pasta do projeto**
+2. **Abra a pasta do projeto**
 
-```bash
-cd KitchenetApp
-```
+Abra a pasta do projeto utilizando um editor de código, como o **VS Code**.
 
-3. **Instalar as dependências**
+3. **Abra o terminal dentro da pasta do projeto**
+
+No VS Code, você pode abrir o terminal, acessando **Terminal → New Terminal**.
+
+4. **Instale as dependências**
+
+No terminal Bash, execute:
 
 ```bash
 npm install
 ```
 
-4. **Iniciar o projeto**
+5. **Inicie o projeto**
+
+Ainda no terminal, execute:
 
 ```bash
 npx expo start
 ```
 
-5. **Executar o aplicativo**
+6. **Executar o aplicativo**
 
-Após iniciar o projeto, abrirá o **Expo Developer Tools** no navegador.
+Após iniciar o projeto, o **Expo Developer Tools** será aberto no navegador.
+
+Você poderá executar o aplicativo das seguintes formas:
 
 **No emulador:**
 - Pressione **a** para abrir no Android Emulator
-- Pressione **w** para abrir no navegador
+
+**No navegador:**
+- Pressione **w** para abrir a versão web do aplicativo
