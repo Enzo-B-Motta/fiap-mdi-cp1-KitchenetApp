@@ -1,5 +1,5 @@
 ### Nome do Aplicativo
-**KitchenetApp**
+##**KitchenetApp**
 
 ### Integrantes do grupo
 
@@ -23,21 +23,37 @@ Essa operação foi escolhida pois possui grande fluxo de alunos em filas, no qu
 
 O aplicativo foi desenvolvido utilizando **React Native com Expo Router**, permitindo navegação entre telas e uma interface simples para o usuário.
 
-As principais funcionalidades implementadas são:
+As funcionalidades implementadas no aplicativo são:
 
-- **Tela de Login**
-  - Interface com campos de usuário e senha
-  - Botão para acesso ao sistema
+#### Tela de Login (index.js)
 
-- **Navegação entre Telas**
-  - Implementada utilizando **Expo Router**
+- Campos para **Usuário** e **Senha**
+- **Botão de acesso** que direciona o usuário para a tela de fila de espera
 
-- **Visualização da Fila de Pedidos**
-  - Estrutura para visualizar os pedidos realizados
+---
 
-- **Interface Mobile**
-  - Layout desenvolvido com **React Native**
-  - Utilização de componentes como `View`, `Text`, `TextInput`, `TouchableOpacity` e `Image`
+#### Fila de Espera (Fila.js)
+
+Tela responsável por simular a organização da fila de pedidos dos clientes.
+
+Funcionalidades da tela:
+
+- Exibição de um **código de pedido**
+- **Botão para gerar um novo código de pedido**
+- **Botão para acessar o cardápio**
+- Estrutura de **fila virtual de pedidos** (simulação)
+
+---
+
+#### Cardápio (Cardapio.js)
+
+Tela que apresenta os itens disponíveis no refeitório.
+
+Funcionalidades da tela:
+
+- Exibição do **nome das comidas**
+- Exibição do **preço dos produtos**
+- **Botão para voltar para a fila de espera**
 
 ### Objetivo do Projeto
 
@@ -50,7 +66,6 @@ Antes de executar o projeto, é necessário ter instalado em sua máquina:
 - **Node.js** (versão 18 ou superior)
 - **npm** 
 - **Expo CLI**
-- Aplicativo **Expo Go** no celular (Android ou iOS)
 
 ### Passo a Passo
 
