@@ -3,11 +3,10 @@
 
 ### Integrantes do grupo
 
-Nome: Enzo Motta RM: 555372
-Nome: Eduardo da Silva RM: 554804
-Nome: Estevam Melo RM: 555124
-Nome: Guilherme Ulacco RM: 558418
-Nome: Matheus Hostim RM: 556517
+Nome: Enzo Motta RM: 555372<br>
+Nome: Eduardo da Silva RM: 554804<br>
+Nome: Guilherme Ulacco RM: 558418<br>
+Nome: Matheus Hostim RM: 556517<br>
 
 ### Descrição do Problema
 O KitchenetApp foi desenvolvido com o objetivo de reduzir o tempo de espera dos clientes em filas para realizar pedidos. Em muitos estabelecimentos, principalmente em horários de pico, as filas podem se tornar longas, causando demora no atendimento e insatisfação dos clientes.
@@ -30,6 +29,9 @@ As funcionalidades implementadas no aplicativo são:
 - Campos para **Usuário** e **Senha**
 - **Botão de acesso** que direciona o usuário para a tela de fila de espera
 
+<img width="281" height="599" alt="image" src="https://github.com/user-attachments/assets/26bd790f-b156-4a03-9d2b-cc106a1f2a60" />
+
+
 ---
 
 #### Fila de Espera (Fila.js)
@@ -43,6 +45,9 @@ Funcionalidades da tela:
 - **Botão para acessar o cardápio**
 - Estrutura de **fila virtual de pedidos** (simulação)
 
+<img width="270" height="599" alt="image" src="https://github.com/user-attachments/assets/00b327f0-4def-400d-bd5e-bdc0f806ee74" />
+
+
 ---
 
 #### Cardápio (Cardapio.js)
@@ -54,6 +59,10 @@ Funcionalidades da tela:
 - Exibição do **nome das comidas**
 - Exibição do **preço dos produtos**
 - **Botão para voltar para a fila de espera**
+
+<img width="275" height="598" alt="image" src="https://github.com/user-attachments/assets/a7061d06-5c28-46e3-9103-5baed1565988" />
+
+---
 
 ### Objetivo do Projeto
 
