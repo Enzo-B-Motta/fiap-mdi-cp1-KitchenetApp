@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, FlatList, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
 import { useRouter } from 'expo-router';
 
 export default function Fila() {
@@ -8,13 +8,13 @@ export default function Fila() {
   const [meuPedido, setMeuPedido] = useState(null);
   const [fila, setFila] = useState(['#102', '#103', '#104']); 
 
-  
   const gerarPedido = () => {
+    if (meuPedido) return; // impede gerar outro pedido
+
     const novoCodigo = Math.floor(Math.random() * 900) + 100; 
     const codigoFormatado = `#${novoCodigo}`;
+    
     setMeuPedido(codigoFormatado);
-    
-    
     setFila([...fila, codigoFormatado]);
   };
 
@@ -28,17 +28,32 @@ export default function Fila() {
         <Text style={styles.codigoText}>
           {meuPedido ? meuPedido : '---'}
         </Text>
+
         <Text style={styles.status}>
-          {meuPedido ? 'Aguardando na fila...' : 'Gere um pedido abaixo'}
+          {meuPedido 
+            ? `Você está na posição ${fila.indexOf(meuPedido) + 1}`
+            : 'Gere um pedido abaixo'}
         </Text>
       </View>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.buttonPrimary} onPress={gerarPedido}>
-          <Text style={styles.buttonText}>Gerar Novo Pedido</Text>
+        <TouchableOpacity 
+          style={[
+            styles.buttonPrimary,
+            meuPedido && { opacity: 0.5 }
+          ]} 
+          onPress={gerarPedido}
+          disabled={!!meuPedido}
+        >
+          <Text style={styles.buttonText}>
+            {meuPedido ? "Pedido já gerado" : "Gerar Novo Pedido"}
+          </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonSecondary} onPress={() => router.push('/Cardapio')}>
+        <TouchableOpacity 
+          style={styles.buttonSecondary} 
+          onPress={() => router.push('/Cardapio')}
+        >
           <Text style={styles.buttonTextSecondary}>Ver Cardápio</Text>
         </TouchableOpacity>
       </View>
@@ -64,7 +79,7 @@ export default function Fila() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000', // padrão com o resto do app
     padding: 20,
   },
   title: {
@@ -72,32 +87,30 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     marginVertical: 20,
-    color: '#000', 
+    color: '#fff', 
   },
   cardDestaque: {
-    backgroundColor: '#fff',
+    backgroundColor: '#070707',
     borderRadius: 15,
     padding: 30,
     alignItems: 'center',
-    elevation: 4,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
     marginBottom: 20,
+    borderWidth: 1,
+    borderColor: '#151515'
   },
   label: {
     fontSize: 16,
-    color: '#6c757d',
+    color: '#c0bebe',
   },
   codigoText: {
     fontSize: 48,
     fontWeight: '900',
-    color: '#212529',
+    color: '#ffffff',
     marginVertical: 10,
   },
   status: {
     fontSize: 14,
-    color: '#28a745',
+    color: '#e6f4fe',
     fontWeight: '600',
   },
   buttonContainer: {
@@ -105,7 +118,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   buttonPrimary: {
-    backgroundColor: '#d9534f',
+    backgroundColor: '#e6f4fe',
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
@@ -116,15 +129,15 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#d9534f',
+    borderColor: '#e6f4fe',
   },
   buttonText: {
-    color: '#fff',
+    color: '#000',
     fontWeight: 'bold',
     fontSize: 16,
   },
   buttonTextSecondary: {
-    color: '#d9534f',
+    color: '#e6f4fe',
     fontWeight: 'bold',
     fontSize: 16,
   },
@@ -135,21 +148,21 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
-    color: '#495057',
+    color: '#c0bebe',
   },
   itemFila: {
     padding: 15,
-    backgroundColor: '#fff',
+    backgroundColor: '#070707',
     borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    borderBottomColor: '#151515',
   },
   itemText: {
     fontSize: 16,
-    color: '#495057',
+    color: '#c0bebe',
   },
   itemDestaque: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#d9534f',
+    color: '#e6f4fe',
   }
 });
