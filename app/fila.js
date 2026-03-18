@@ -38,7 +38,7 @@ export default function Fila() {
           <Text style={styles.buttonText}>Gerar Novo Pedido</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonSecondary} onPress={() => router.push('/Cardapio.js')}>
+        <TouchableOpacity style={styles.buttonSecondary} onPress={() => router.push('/Cardapio')}>
           <Text style={styles.buttonTextSecondary}>Ver Cardápio</Text>
         </TouchableOpacity>
       </View>
