@@ -111,3 +111,55 @@ Você poderá executar o aplicativo das seguintes formas:
 
 **No navegador:**
 - Pressione **w** para abrir a versão web do aplicativo
+
+### Decisões Técnicas
+
+O projeto foi desenvolvido utilizando **React Native com Expo Router**, com foco em simplicidade e organização básica das telas.
+
+#### Estrutura do Projeto
+
+A aplicação está organizada em arquivos separados para cada tela, seguindo o padrão do Expo Router:
+
+- `index.js` → Tela de Login
+- `Fila.js` → Tela de Fila de Espera
+- `_layout.js` → Configuração da navegação
+
+Essa separação permite melhor organização do código e facilita futuras manutenções.
+
+#### Hooks Utilizados
+
+- **useState**
+  - Utilizado na tela de login para armazenar os dados inseridos pelo usuário (usuário e senha)
+  - Permite que os campos de input sejam controlados dinamicamente
+
+#### Navegação
+
+A navegação foi implementada utilizando o **Expo Router**, com estrutura baseada em arquivos.
+
+- O arquivo `_layout.js` define a navegação utilizando o componente `Stack`
+- A navegação entre telas é feita com o hook `useRouter`
+
+Fluxo atual:
+
+1. O usuário entra na tela de login (`index.js`)
+2. Clicando no botão, ele vai ser redirecionado para a tela de fila (`Fila.js`)
+
+#### Estilização
+
+A estilização foi feita com o **StyleSheet** do React Native, tendo:
+
+- Organização dos estilos
+- Separação entre lógica e aparência
+- Interface simples e funcional
+
+### Próximos Passos
+
+Com mais tempo, o grupo pretende evoluir o aplicativo com:
+
+- Implementação completa da tela de fila de pedidos
+- Criação da tela de cardápio funcional
+- Integração entre pedidos e fila
+- Melhoria da interface visual
+- Adição de feedbacks ao usuário (mensagens e estados de carregamento)
+
+Com essas melhorias o aplicativo seria aperfeiçoado, estando mais completo e mais próximo de um cenário real no mercado
