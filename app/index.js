@@ -17,7 +17,7 @@ export default function App() {
       <TextInput style={styles.input}/>
       
 
-      <TouchableOpacity style={styles.btn} onPress={() => router.push('/fila.js')}>
+      <TouchableOpacity style={styles.btn} onPress={() => router.push('/fila')}>
         <Text style={styles.btnText}>LOGAR</Text>
       </TouchableOpacity>
       </View>
